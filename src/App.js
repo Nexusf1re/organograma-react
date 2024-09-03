@@ -1,14 +1,12 @@
 import './App.css';
 import Banner from './components/Banner/';
-import TxtField from './components/TxtField';
+import Form from './components/Form/';
 
 function App() {
   return (
     <div className="App">
       <Banner/>
-      <TxtField label="Nome"/>
-      <TxtField label="Cargo"/>
-      <TxtField label="Imagem"/>
+      <Form/>
     </div>
   );
 }
