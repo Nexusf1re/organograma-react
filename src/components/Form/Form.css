@@ -1,3 +1,19 @@
+@media screen and (max-width:599px){
+    .form{
+        margin: 30px 10px !important;
+        
+    }
+
+    .form form {
+        padding: 24px 34px !important;
+        box-shadow: 2px 8px 8px 10px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    h2{
+        font-size: 22px;
+    }
+}
+
 .form {
     display: flex;
     justify-content: center;
@@ -9,5 +25,5 @@
     background-color: #F2F2F2;
     border-radius: 20px;
     padding: 36px 64px;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.2);
 }

@@ -1,8 +1,14 @@
+@media screen and (max-width: 599px) {
+    .banner img {
+        max-width: 100% !important;
+    }
+}
+
 .banner {
     background-color: #6278F7;
     text-align: center;
 }
 
 .banner img {
-    max-width: 100%;
+    max-width: 40%;
 }
