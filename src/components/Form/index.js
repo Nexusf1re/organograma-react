@@ -4,13 +4,11 @@ import Dropdown from "../Dropdown";
 import Button from "../Button";
 import { useState } from "react";
 
-const Form = () => {
+const Form = (props) => {
 
   const teams = [
-    'Programador',
-    'Gerente',
-    'Supervisor',
-    'Prestador'
+    'Adm',
+    'Unidade',
   ]
 
   const [nome, setNome] = useState('')
@@ -20,7 +18,12 @@ const Form = () => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault()
-    console.log("Form foi submetido =>", nome, cargo, imagem, team)
+    props.aoColaboradorCadastrado({
+      nome,
+      cargo,
+      imagem,
+      team
+    })
   }
 
   return (
