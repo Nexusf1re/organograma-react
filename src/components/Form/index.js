@@ -6,11 +6,6 @@ import { useState } from "react";
 
 const Form = (props) => {
 
-  const teams = [
-    'Adm',
-    'Unidade',
-  ]
-
   const [nome, setNome] = useState('')
   const [cargo, setCargo] = useState('')
   const [imagem, setImagem] = useState('')
@@ -18,12 +13,18 @@ const Form = (props) => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault()
+
     props.aoColaboradorCadastrado({
       nome,
       cargo,
       imagem,
       team
     })
+    setNome('')
+    setCargo('')
+    setImagem('')
+    setTeam('')
+
   }
 
   return (
@@ -53,7 +54,7 @@ const Form = (props) => {
         <Dropdown
            obrigatorio={true}
            label="Time"
-           itens={teams}
+           itens={props.teams}
            valor={team}
            aoAlterado={valor => setTeam(valor)}
            />
